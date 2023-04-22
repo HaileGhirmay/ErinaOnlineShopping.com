@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Erina-Online-Shoping.iml" filepath="$PROJECT_DIR$/.idea/Erina-Online-Shoping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-service/admin-service.iml" filepath="$PROJECT_DIR$/admin-service/admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer-service/customer-service.iml" filepath="$PROJECT_DIR$/customer-service/customer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/finance-service/finance-service.iml" filepath="$PROJECT_DIR$/finance-service/finance-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-service/product-service.iml" filepath="$PROJECT_DIR$/product-service/product-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registry-service/registry-service.iml" filepath="$PROJECT_DIR$/registry-service/registry-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-cart-service/shopping-cart-service.iml" filepath="$PROJECT_DIR$/shopping-cart-service/shopping-cart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vendor-service/vendor-service.iml" filepath="$PROJECT_DIR$/vendor-service/vendor-service.iml" />
+    </modules>
+  </component>
+</project>
