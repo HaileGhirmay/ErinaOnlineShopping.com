@@ -1,0 +1,1093 @@
+{
+	"info": {
+		"_postman_id": "76e80630-6c6a-4970-9401-bc3cf6b6314e",
+		"name": "ErinaOnlineShopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21022068"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "addNewProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"productId\": \"prod2\",\n\"productName\": \"Orange\",\n\"categoryName\": \"fruit\",\n\"description\": \"This is one of the best fruits, which is 100% Organic\",\n\"unitPrice\": 1.88,\n\"quantity\": 1000,\n\"vendorId\": \"v001\",\n\"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/prod2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"prod2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApprovedProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/Approved",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"Approved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAvailableProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/Available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"Available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUnApprovedProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/upApproved",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"upApproved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": \"prod2\",\n    \"productName\": \"Orange\",\n    \"categoryName\": \"fruit\",\n    \"description\": \"This is one of the good fruits, which is 100% Organic\",\n    \"unitPrice\": 1.88,\n    \"quantity\": 1000,\n    \"vendorId\": \"v001\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/products/updateProduct/prod2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"updateProduct",
+								"prod2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "false",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/products/updateStatus/prod3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"updateStatus",
+								"prod3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductQuantity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "44",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/products/updateQuantity/prod3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"updateQuantity",
+								"prod3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deductSoldFromTotatQuantity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "4",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/products/updateQuantity/prod3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"updateQuantity",
+								"prod3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/Available/category/fruit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"Available",
+								"category",
+								"fruit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/Available/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"Available",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAvailableProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/products/Available/prod1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"Available",
+								"prod1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "addNewCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"customerId\": \"cust2\",\n\"customerFirstName\": \"Yafet\",\n\"customerLastName\": \"Welega\",\n\"customerPhoneNumber\": \"6418191533\",\n\"customerEmail\":\"yaraya@miu.edu\",\n\"customerUsername\": \"Yafet\",\n\"customerPassword\":\"PassWord1009\",\n\"customerAddress\": \"1009E Awda Ave\",\n\"customerStatus\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/customers/cust1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customers",
+								"cust1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShoppingCart",
+			"item": [
+				{
+					"name": "addNewProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/shoppingcarts/addProduct/cust1/prod4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"shoppingcarts",
+								"addProduct",
+								"cust1",
+								"prod4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getShoppingCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/shoppingcarts/cust1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"shoppingcarts",
+								"cust1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkOutShoppingCartItems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "5516470039173647",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/shoppingcarts/checkOut/cust1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"shoppingcarts",
+								"checkOut",
+								"cust1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/shoppingCart/checkOut/SC6268/33333",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"shoppingCart",
+								"checkOut",
+								"SC6268",
+								"33333"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "putNewOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"ord1\",\n    \"shopingCartt\": {\n        \"id\":\"cust2\",\n        \"productDTOS\":[{\n            \"productId\":\"prod1\",\n            \"productName\":\"Banana\",\n            \"description\": \"This is one of the best fruit, which is 100% Organic\",\n            \"unitPrice\": 0.88,\n            \"quantity\":1\n        }],\n        \"totalPrice\":0.88\n    },\n    \"user\":{\n        \"id\":\"cust2\",\n        \"customerFirstName\": \"Ghidiom\",\n        \"customerLastName\": \"Nughusse\",\n        \"customerPhoneNumber\": \"6418191504\",\n        \"customerEmail\":\"gberaki@miu.edu\",\n        \"customerUsername\":\"Ghidiom\",\n        \"customerPassword\": \"PassWord1009\",\n        \"customerStatus\": false,\n        \"customerAddress\": \"1009E Awda Ave\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/orders/ord1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"orders",
+								"ord1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNewOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"ord1\",\n\t\"shopingCartt\": [{\n\t\t\"id\": \"cust2\",\n\t\t\"productDTOS\": [{\n\t\t\t\"productId\": \"prod1\",\n\t\t\t\"productName\": \"Banana\",\n\t\t\t\"description\": \"This is one of the best fruit, which is 100% Organic\",\n\t\t\t\"unitPrice\": 0.88,\n\t\t\t\"quantity\": 1\n\t\t}],\n\t\t\"totalPrice\": 0.88\n\t}],\n\t\"user\": [{\n\t\t\"id\": \"cust2\",\n\t\t\"customerFirstName\": \"Ghidiom\",\n\t\t\"customerLastName\": \"Nughusse\",\n\t\t\"customerPhoneNumber\": \"6418191504\",\n\t\t\"customerEmail\": \"gberaki@miu.edu\",\n\t\t\"customerUsername\": \"Ghidiom\",\n\t\t\"customerPassword\": \"PassWord1009\",\n\t\t\"customerStatus\": false,\n\t\t\"customerAddress\": \"1009E Awda Ave\"\n\t}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNewOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"ord2\",\n    \"shopingCartt\": {\n        \"id\":\"cust1\",\n        \"productDTOS\":[{\n            \"productId\":\"prod1\",\n            \"productName\":\"Banana\",\n            \"description\": \"This is one of the best fruit, which is 100% Organic\",\n            \"unitPrice\": 0.88,\n            \"quantity\":1\n        }],\n        \"totalPrice\":0.88\n    },\n    \"user\":{\n        \"id\":\"cust1\",\n        \"customerFirstName\": \"Mitiku\",\n        \"customerLastName\": \"Kmariyam\",\n        \"customerPhoneNumber\": \"6418191504\",\n        \"customerEmail\":\"mitiku@miu.edu\",\n        \"customerUsername\":\"Mitiku\",\n        \"customerPassword\": \"PassWord1009\",\n        \"customerStatus\": false,\n        \"customerAddress\": \"1000N 4th street Ave\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Finance",
+			"item": [
+				{
+					"name": "updateFinance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ImpurePriceWithTax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/ImpurPrice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"ImpurPrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purePriceWithNoTax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/purPrice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"purPrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "moneyWePay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/wePay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"wePay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "moneyWeReceive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/weReceive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"weReceive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taxPaid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/taxWePay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"taxWePay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "financeSummaryData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/finance/dataSummary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finance",
+								"dataSummary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "getAllAdmins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"adminId\":\"admin2\",\n    \"userName\":\"admin2\",\n    \"password\":\"admin2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproveProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "true",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/admins/approveProduct/prod9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approveProduct",
+								"prod9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproveCustomer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "true",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/admins/approveCustomer/cust1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approveCustomer",
+								"cust1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproveVendor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "true",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/admins/approveVendor/v001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approveVendor",
+								"v001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllApprovedVendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/approvedVendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approvedVendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUnApprovedVendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/unApprovedVendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"unApprovedVendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllApprovedProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/approvedProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approvedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUnApprovedProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/unApprovedProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"unApprovedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllApprovedCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/approvedCustomers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"approvedCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUnApprovedCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/admins/unApprovedProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"admins",
+								"unApprovedProducts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vendor",
+			"item": [
+				{
+					"name": "AddNewVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vendorId\": \"v002\",\n    \"firstName\": \"Haile\",\n    \"lastName\":\"Gebre\",\n    \"email\":\"ghaile@miu.edu\",\n    \"userName\":\"Haile\",\n    \"password\":\"haileG457\",\n    \"vendorStatus\": true,\n    \"productList\":[\n    {\n        \"productId\": \"prod1\",\n        \"productName\": \"Banana\",\n        \"categoryName\": \"fruit\",\n        \"description\": \"This is one of the best fruit, which is 100% Organic\",\n        \"unitPrice\": 0.88,\n        \"quantity\": 10,\n        \"vendorId\": \"v001\",\n        \"status\": true\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/vendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/vendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vendors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
