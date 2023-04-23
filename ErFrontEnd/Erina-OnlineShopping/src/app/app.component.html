@@ -1,0 +1,95 @@
+<mat-toolbar color="primary" class="example-header">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div>
+      <a mat-button routerLink="/products" style="font-family: 'Anton', sans-serif">Erina Online Shopping</a>
+    </div>
+
+    <div class="col-md-7 justify-content-start">
+
+<!--      <a mat-button style="font-family: 'Anton', sans-serif" routerLink="/products"> Products-->
+<!--      </a>-->
+      <a>
+        <button mat-button [matMenuTriggerFor]="productMenu">Products</button>
+        <mat-menu #productMenu="matMenu">
+          <button mat-menu-item routerLink="/products">ApprovedProducts</button>
+          <button mat-menu-item routerLink="/unapprovedProducts" *ngIf="isAdmin">UnapprovedProducts</button>
+        </mat-menu>
+      </a>
+
+
+      <a mat-button style="font-family: 'Anton', sans-serif" routerLink="/contact"> Contact Us
+        <i class="fa fa-mail-forward">
+        </i>
+
+      </a>
+
+          <a>
+
+            <form class="form-header"  method="GET"  id="search">
+              <input
+                [(ngModel)]="search.searchTerm"
+                [ngModelOptions]="{standalone: true}"
+                (keyup)="search.search($event)"
+                class="au-input au-input-xl"
+                type="text"
+                placeholder="Search for products ..."
+              />
+            </form>
+
+          </a>
+    </div>
+
+
+    <div class="col-md-5 justify-content-end">
+      <a mat-button *ngIf="!_authService.loggedIn()" routerLink="/auth/login" routerLinkActive="Active">Sign in
+      </a>
+
+      <a>
+        <button mat-button [matMenuTriggerFor]="menu">Register As v</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/auth/register" routerLinkActive="Active">Customer</button>
+          <button mat-menu-item routerLink="/auth/registerVendor" routerLinkActive="Active">Vendor</button>
+        </mat-menu>
+      </a>
+
+      <a mat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+
+        <a mat-button routerLink="/cart" routerLinkActive="Active">
+
+        <mat-icon>shopping_cart</mat-icon>
+        Cart
+      </a>
+
+      <a href="shopping-detail.html">
+
+        <app-cart-status></app-cart-status>
+
+      </a>
+
+    </div>
+
+  </mat-toolbar-row>
+
+
+</mat-toolbar>
+
+<ng-container>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav justify-content-center text-center"
+      [fixedInViewport]="false">
+
+      <app-product-category-menue></app-product-category-menue>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="example-footer">
+    Erina Online Shopping
+  </mat-toolbar>
+</ng-container>

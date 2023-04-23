@@ -1,0 +1,40 @@
+/*The following code done by Mussie*/
+
+
+mat-form-field{
+    width: 100%;
+  }
+  
+  mat-progress-spinner{
+    margin: auto;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .radio-button {
+    margin: 5px;
+  }
+  
+  .main-div{
+    height: 100vh;
+  
+  }
+  
+  button{
+    width: 100%;
+  }
+  
+  .signup{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+
+  

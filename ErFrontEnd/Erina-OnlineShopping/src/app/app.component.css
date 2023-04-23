@@ -1,0 +1,63 @@
+.nav-item, .navbar-brand {
+    font-family: 'Anton', sans-serif;
+  }
+  a {
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+    
+  }
+  .example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    background: #f0e9e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ceccd6, #76372b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #764d2b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  
+  .example-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #5433FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5FECB, #ff2024, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5FECB, #ffda20, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ff5233;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5FECB, #ffe520, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  
+  .itemCss {
+    font-family: 'Alfa Slab One', cursive;
+    background: #856307;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #855d07);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #857907); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+  }
+  
+  .form-header{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex
+  }
