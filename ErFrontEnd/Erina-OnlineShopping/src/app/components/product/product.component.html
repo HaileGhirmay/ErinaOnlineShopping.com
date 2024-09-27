@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of products | filter:searchKey: 'productName'">
+      <div class="card col-md-3">
+        <img src="{{item.pictureUrl}}" alt="">
+        <h5
+          style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productName}}</h5>
+        <p
+          style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:</strong> ${{item.unitPrice | currency: "USD"}}</p>
+        <label for="quantity">Quantity:</label>
+        <div>
+          <select id="quantity" [(ngModel)]="selectedQuantity">
+            <option *ngFor="let quantity of quantities" [value]="quantity">{{quantity}}</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" (click)="addtocart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+    <button class="btn btn-primary" routerLink="/cart" *ngIf="showAddToCartButton">Go to Cart</button>
+  </div>
+</div>
+<div *ngIf="isVendor">
+  <button class="btn btn-primary" *ngIf="addNewProduct" (click)="toggleAddNewProduct()">Add New Product</button>
+  <form #productForm="ngForm" (ngSubmit)="addProduct(productForm.value)" id="addProductForm" *ngIf="!addNewProduct">
+    <div class="form-group">
+      <label for="name">ProductName:</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.productName" required>
+    </div>
+    <div class="form-group">
+      <label for="description">ProductDescription:</label>
+      <textarea type="text" class="form-control" id="description" name="description" [(ngModel)]="product.description">
+    </textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">ProductPrice:</label>
+      <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.unitPrice" min="0"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="productQuantity">ProductQuantity:</label>
+      <input type="number" class="form-control" id="productQuantity" name="quantity" [(ngModel)]="product.quantity"
+             min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="productId">ProductId:</label>
+      <input type="text" class="form-control" id="productId" name="productId" [(ngModel)]="product.productId"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="vendorId">VendorId:</label>
+      <input type="text" class="form-control" id="vendorId" name="vendorId" [(ngModel)]="product.vendorId"
+             required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>

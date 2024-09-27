@@ -1,0 +1,52 @@
+<!--The following code done by Aboneh -->
+
+<div class="main-div">
+  <div class="signup">
+    <mat-card>
+      <mat-progress-spinner *ngIf="isLoading"></mat-progress-spinner>
+      <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerFirstName" matInput type="customerFirstName" ngModel placeholder="First name" name="customerFirstName" #customerFirstNameInput="ngModel" required>
+          <mat-error *ngIf="">Please enter first name</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerLastName" matInput type="customerLastName" ngModel placeholder="Last name" name="customerLastName" #customerLastNameInput="ngModel" required>
+          <mat-error *ngIf="">Please enter a valid last name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerPhoneNumber" matInput type="customerPhoneNumber" ngModel placeholder="Phone Number" name="customerPhoneNumber" #customerPhoneNumberInput="ngModel" required>
+          <mat-error *ngIf="">Please enter Phone Number</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerEmail" matInput type="customerEmail" ngModel placeholder="customerEmail" name="customerEmail" #customerEmailInput="ngModel" required email>
+          <mat-error *ngIf="customerEmailInput.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerUsername" matInput type="customerUsername" ngModel placeholder="customerUsername" name="customerUsername" #customerUsernameInput="ngModel" required>
+          <mat-error *ngIf="">Please enter customerUsername</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerPassword" matInput type="customerPassword" placeholder="customerPassword" name="customerPassword" ngModel #customerPasswordInput="ngModel" required>
+          <mat-error *ngIf="">Please enter a valid password</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.customerAddress" matInput type="customerAddress" ngModel placeholder="customerAddress" name="customerAddress" #customerAddressInput="ngModel" required>
+          <mat-error *ngIf="">Please enter Customer Address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [(ngModel)]="registerUserData.role" matInput placeholder="role" name="role" ngModel #roleInput="ngModel" required>
+          <mat-error *ngIf="">Please enter a valid role</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">
+          Signup
+        </button>
+      </form>
+    </mat-card>
+  </div>
+</div>

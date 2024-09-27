@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of unapprovedProducts">
+      <div class="card col-md-3">
+        <img src="{{item.pictureUrl}}" alt="">
+        <h5
+          style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productName}}</h5>
+        <p
+          style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:</strong> ${{item.unitPrice | currency: "USD"}}</p>
+        <div id="unapprovedProductsButton">
+          <button id="approve" class="btn btn-primary" (click)="approveProduct(item)">Approve</button>
+          <button id="decline" class="btn btn-primary">Decline</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
